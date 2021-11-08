@@ -4,11 +4,17 @@ html{
     min-width: $MobileWidth;
     margin: auto;
     background-color: $LightGrayishCyan;
+    // font-size: $FontSize;
 }
 
 body{
     border-radius: 10px;
     background-color: white;
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+        -webkit-appearance: none; 
+        margin: 0;
+    }
 }
 
 .main{
@@ -36,12 +42,17 @@ body{
                 padding: 0.5rem 3rem 0.5rem 3rem;
                 border-radius: 5px;
                 color: white;
+                cursor: pointer;
 
-                :target {
+                &:target{
                     background-color: $strongCyan;
                   }
+
+
+            
+
             }
-            input[number]{
+            input{
                 width: 10%;
                 padding: 0 1rem 0 1rem;
                 color: white;
@@ -50,6 +61,10 @@ body{
             
         }
     }
+}
+
+.choice{
+    background-color: $strongCyan;
 }
 
 .display{

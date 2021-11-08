@@ -12,6 +12,12 @@ body {
   background-color: white;
 }
 
+body input[type=number]::-webkit-inner-spin-button,
+body input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -48,17 +54,22 @@ body {
   padding: 0.5rem 3rem 0.5rem 3rem;
   border-radius: 5px;
   color: white;
+  cursor: pointer;
 }
 
-.container .tip-pad__row .percent-button :target {
+.container .tip-pad__row .percent-button:target {
   background-color: #26c0ab;
 }
 
-.container .tip-pad__row input[number] {
+.container .tip-pad__row input {
   width: 10%;
   padding: 0 1rem 0 1rem;
   color: white;
   width: auto;
+}
+
+.choice {
+  background-color: #26c0ab;
 }
 
 .display {
