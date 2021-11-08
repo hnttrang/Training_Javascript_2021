@@ -6,8 +6,6 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="styles/css/style.css">
-  <link rel="stylesheet" href="js/main.js">
-  
   <title> Zodinet Training JavaScript | Tip calculator app</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -17,9 +15,16 @@
   </style>
 </head>
 <body>
-
-  Bill
-
+  <section> 
+    <!-- Left side -->
+    <section class="container">
+      <div class="input-bar">
+        <img src="/images/icon-dollar.svg" alt="icon-dollar">
+        <input type="number" name="bill" id="bill" placeholder="0">
+      </div>
+      <!-- Beginning of tip-pad -->
+      <section class="tip-pad"> 
+        <!-- Bill
   Select Tip %
   5%
   10%
@@ -27,8 +32,39 @@
   25%
   50%
   Custom
+ -->
+        <div class="tip-pad__row"></div>
+          <a class="percent-button">5%</a>
+          <a class="percent-button">10%</a>
+          <a class="percent-button">15%</a>
+        <div class="tip-pad__row">
+          <a class="percent-button">25%</a>
+          <a class="percent-button">50%</a>
+          <input type="number" class="percent-button" name="percent" id="cus-percent">
+        </div>
+      </section>
+      <!-- End of tip-pad-->
+      <div class="input-bar">
+        <img src="/images/icon-person.svg" alt="icon-person">
+        <input type="number" name="people" id="people" placeholder="0">
+      </div>
+    </section>
+    <!-- Right side -->
+    <section class="container">
+      <div class="display">
+        <h5>Tip Amount <br> <p>/people</p></h5>
+        <h4 id="tipAmount"><img src="/images/icon-dollar.svg" alt=""></h4>
+      </div>
+      <div class="display">
+        <h5>Total <br> <p>/people</p></h5>
+        <h4 id="total"><img src="/images/icon-dollar.svg" alt=""></h4>
+      </div>
+      <a id="reset">RESET</a>
+    </section>
+  </section>
 
-  Number of People
+  
+ 
 
   Tip Amount
   / person
@@ -43,4 +79,7 @@
     Coded by <a href="#">Your Name Here</a>.
   </div>
 </body>
+
+<script src="js/main.js"></script>
+  
 </html>
