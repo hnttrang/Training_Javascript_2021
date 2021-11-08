@@ -15,9 +15,10 @@
   </style>
 </head>
 <body>
-  <section> 
+  <section class="main"> 
     <!-- Left side -->
     <section class="container">
+      <p>BILL</p>
       <div class="input-bar">
         <img src="/images/icon-dollar.svg" alt="icon-dollar">
         <input type="number" name="bill" id="bill" placeholder="0">
@@ -33,14 +34,16 @@
   50%
   Custom
  -->
-        <div class="tip-pad__row"></div>
+        <div class="tip-pad__row">
           <a class="percent-button">5%</a>
           <a class="percent-button">10%</a>
           <a class="percent-button">15%</a>
+        </div>
+          
         <div class="tip-pad__row">
           <a class="percent-button">25%</a>
           <a class="percent-button">50%</a>
-          <input type="number" class="percent-button" name="percent" id="cus-percent">
+          <input type="number" class="percent-button" placeholder="CUSTOM" name="percent" id="cus-percent">
         </div>
       </section>
       <!-- End of tip-pad-->
@@ -63,16 +66,6 @@
     </section>
   </section>
 
-  
- 
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 

@@ -1,8 +1,69 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 html {
   font-family: 'Space Mono', monospace;
-  max-width: 375px;
-  min-width: 1440ppx;
+  max-width: 1440px;
+  min-width: 375px;
   margin: auto;
+  background-color: #c5e4e7;
+}
+
+body {
+  border-radius: 10px;
+  background-color: white;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container {
+  padding: 1rem;
+}
+
+.container .input-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .input-bar input {
+  border: none;
+  outline: none;
+  text-align: right;
+}
+
+.container .tip-pad__row {
+  padding: 0.5rem;
+}
+
+.container .tip-pad__row .percent-button {
+  font-weight: 700;
+  background-color: #00494d;
+  margin: 0.5rem;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  border-radius: 5px;
+  color: white;
+}
+
+.container .tip-pad__row .percent-button :target {
+  background-color: #26c0ab;
+}
+
+.container .tip-pad__row input[number] {
+  width: 10%;
+  padding: 0 1rem 0 1rem;
+  color: white;
+  width: auto;
+}
+
+.display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=style.css.map */

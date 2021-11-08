@@ -3,5 +3,58 @@ html{
     max-width: $DestopWidth;
     min-width: $MobileWidth;
     margin: auto;
+    background-color: $LightGrayishCyan;
 }
+
+body{
+    border-radius: 10px;
+    background-color: white;
+}
+
+.main{
+    display: flex;
+}
+
+.container{
+    padding: 1rem;
+    .input-bar{
+        display: flex;
+        justify-content: space-between;
+        input{
+            border: none;
+            outline: none;
+            text-align: right;
+        }
+    }
+    .tip-pad{
+        &__row{
+            padding: 0.5rem;
+            .percent-button{
+                font-weight: 700;
+                background-color: $VeryDarkCyan;
+                margin: 0.5rem;
+                padding: 0.5rem 3rem 0.5rem 3rem;
+                border-radius: 5px;
+                color: white;
+
+                :target {
+                    background-color: $strongCyan;
+                  }
+            }
+            input[number]{
+                width: 10%;
+                padding: 0 1rem 0 1rem;
+                color: white;
+                width: auto;
+            }
+            
+        }
+    }
+}
+
+.display{
+    display: flex;
+}
+
+
 

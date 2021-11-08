@@ -43,9 +43,12 @@ tippad.map( percent => {
 function checkExp(exp){
     console.log(exp);
     for (var el in exp) {
-        if (exp[el] == null)
+        if (exp[el] == null){
             return 0;
+        }
     }
+    if (exp.bill < 0){return 0};
+    if (exp.people <= 0){return 0};
     caculate(exp);
 }
 
