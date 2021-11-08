@@ -14,7 +14,7 @@ let exp ={
 }
 
 bill.addEventListener('change', function(e){
-    exp.bill = parseInt(bill.value);
+    exp.bill = parseFloat(bill.value);
     checkExp(exp);
 });
 
@@ -25,12 +25,12 @@ people.addEventListener('change', function(e){
 
 //custom tip
 custom.addEventListener("change", function(e){
-    exp.percent = parseInt(custom.value);
+    exp.percent = parseFloat(custom.value)/100;
     checkExp(exp);
 })
 
 //percent of tip
-tippad.map( percent => {
+tippad.forEach( percent => {
     percent.addEventListener('click', function(e){
         exp.percent = parseInt(e.target.innerText)/100;
         checkExp(exp);
@@ -42,7 +42,7 @@ tippad.map( percent => {
 
 function checkExp(exp){
     console.log(exp);
-    for (var el in exp) {
+    for (let el in exp) {
         if (exp[el] == null){
             return 0;
         }
