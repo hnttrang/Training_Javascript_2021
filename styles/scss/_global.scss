@@ -1,9 +1,17 @@
 html{
     font-family: 'Space Mono', monospace;
+    color: $VeryDarkCyan;
     max-width: $DestopWidth;
     min-width: $MobileWidth;
     margin: auto;
     background-color: $LightGrayishCyan;
+    h1{
+        font-size: 40px;
+        margin: 0.5rem;
+    }
+    h5{
+        padding: .5rem;
+    }
     // font-size: $FontSize;
 }
 
@@ -19,17 +27,27 @@ body{
 
 .main{
     display: flex;
+    justify-content: center;
 }
 
 .container{
     padding: 1rem;
     .input-bar{
+        background-color: $LightGrayishCyan2;
         display: flex;
         justify-content: space-between;
+        padding: 0.5rem;
+        border-radius: 10px;
         input{
             border: none;
             outline: none;
             text-align: right;
+            font-family: 'Space Mono', monospace;
+            font-weight: 400;
+            outline: none;
+            border: none;
+            background-color: $LightGrayishCyan2;
+            
         }
     }
     .tip-pad{
@@ -50,7 +68,7 @@ body{
 
                 &__target{
                     background-color: $strongCyan;
-                    color: black;
+                    color: $VeryDarkCyan;
                 }
 
                 &:target{
@@ -71,14 +89,28 @@ body{
             
         }
     }
+
 }
 
-.choice{
-    background-color: $strongCyan;
+    
+.right-side{
+    background-color: $VeryDarkCyan;
+    border-radius: 10px;
+    margin: 2rem;
+    padding: 1.5rem;
+    
+    a{
+        color: white;
+    }
 }
 
 .display{
     display: flex;
+    justify-content: space-between;
+    color: $strongCyan;
+    border-radius: 10px;
+
+    
 }
 
 

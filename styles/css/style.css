@@ -1,10 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
 html {
   font-family: 'Space Mono', monospace;
+  color: #00494d;
   max-width: 1440px;
   min-width: 375px;
   margin: auto;
   background-color: #c5e4e7;
+}
+
+html h1 {
+  font-size: 40px;
+  margin: 0.5rem;
+}
+
+html h5 {
+  padding: .5rem;
 }
 
 body {
@@ -22,6 +32,9 @@ body input[type=number]::-webkit-outer-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container {
@@ -29,18 +42,26 @@ body input[type=number]::-webkit-outer-spin-button {
 }
 
 .container .input-bar {
+  background-color: #f4fafa;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 0.5rem;
+  border-radius: 10px;
 }
 
 .container .input-bar input {
   border: none;
   outline: none;
   text-align: right;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  outline: none;
+  border: none;
+  background-color: #f4fafa;
 }
 
 .container .tip-pad__row {
@@ -67,7 +88,7 @@ body input[type=number]::-webkit-outer-spin-button {
 
 .container .tip-pad__row .percent-button__target {
   background-color: #26c0ab;
-  color: black;
+  color: #00494d;
 }
 
 .container .tip-pad__row .percent-button:target {
@@ -82,13 +103,25 @@ body input[type=number]::-webkit-outer-spin-button {
   border: none;
 }
 
-.choice {
-  background-color: #26c0ab;
+.right-side {
+  background-color: #00494d;
+  border-radius: 10px;
+  margin: 2rem;
+  padding: 1.5rem;
+}
+
+.right-side a {
+  color: white;
 }
 
 .display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #26c0ab;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -65,19 +65,18 @@ function checkExp(exp){
 function caculate(exp){
     let tip = exp.bill * exp.percent / exp.people; //Tip per people
     // let total = exp.bill/exp.people + tip; //total per people
-    
+    //fetch API when the exp is full
     tipAmount.innerText = tip; //Tip per people
     total.innerText = exp.bill / exp.people + tip;
     console.log(tip, total);
 }
 
 reset.addEventListener('click', function(e){
-    total.innerText = 0.0;
-    tipAmount.innerText = 0.0;
+    total.innerText = "0.00";
+    tipAmount.innerText = "0.00";
     exp.bill = null;
     exp.people = null;
     exp.percent = null;
     people.value = null;
     bill.value = null;
-    console.log(exp);
 })
