@@ -28,12 +28,9 @@ const app = {
 
     reset: function(){
         //Buttons will always be disable
-        if(!btnCalc.classList.contains("btn-disable")){
-            btnCalc.classList.add("btn-disable");
-        }
-        if(!btnReset.classList.contains("btn-disable")){
-            btnReset.classList.add("btn-disable");
-        }
+        this.disableButton(btnReset);
+        this.disableButton(btnCalc);
+        //Reset the app value
         this.bill = null;
         this.people = null;
         this.percent = null;
@@ -41,7 +38,7 @@ const app = {
             tippad[this.lastChoice].classList.remove("percent-button__target");
         }
         lastChoice = 0;
-        //Reset display
+        //Reset the display
         total.innerText = "0.00";
         tipAmount.innerText = "0.00";
         inputBill.value = null;
@@ -61,12 +58,22 @@ const app = {
         console.log(this);
     },
 
+    disableButton: function(btn){
+        if(!btn.classList.contains("btn-disable")){
+            btn.classList.add("btn-disable");
+        }
+    },
+
+    enableButton: function(btn){
+        if(btn.classList.contains("btn-disable")){
+            btn.classList.remove("btn-disable");
+        }
+    },
+
     //Button will be able to click
     isValid: function(){
-        //
-        if(btnReset.classList.contains('btn-disable')){
-            btnReset.classList.remove('btn-disable');
-        }
+        //Enable Reset button
+        this.enableButton(btnReset);
         //Disable the submit button
         //Check bill value
         if(this.bill != null){
@@ -89,14 +96,28 @@ const app = {
         } else{
             return false;
         }
-        //Able the submit button
-        if(btnCalc.classList.contains('btn-disable')){
-            btnCalc.classList.remove('btn-disable');
-        }
+        //Enble the submit button when the form is valid
+        this.enableButton(btnCalc);
+    },
+
+    display: function(result){
+        tipAmount.innerText = result.amount.toFixed(2);
+        total.innerText = result.total.toFixed(2);
+        this.disableButton(btnCalc);
     },
 
     //call API
     calculate: async function(){
+        try {
+            let result = await fetch(
+                `${api}?bill=${app.bill}&people=${app.people}&tipPercent=${app.percent}`
+            );
+
+            app.display(await result.json());
+
+        } catch (error) {
+            
+        }
 
     },
 
@@ -128,6 +149,11 @@ const app = {
         inputPeople.addEventListener('change', function(e){
             app.people = parseInt(inputPeople.value);
             app.isValid();
+        }),
+
+        btnCalc.addEventListener('click', function(e){
+            console.log("onClicked");
+            app.calculate();
         })
 
     },
