@@ -66,8 +66,9 @@ function caculate(exp){
     let tip = exp.bill * exp.percent / exp.people; //Tip per people
     // let total = exp.bill/exp.people + tip; //total per people
     //fetch API when the exp is full
-    tipAmount.innerText = tip; //Tip per people
-    total.innerText = exp.bill / exp.people + tip;
+    tipAmount.innerText = tip.toFixed(2); //Tip per people
+    totalperP = parseFloat((exp.bill / exp.people) + tip);
+    total.innerText = totalperP.toFixed(2);
     console.log(tip, total);
 }
 
