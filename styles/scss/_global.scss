@@ -42,6 +42,9 @@ body{
     .input-bar{
         &__invalid{
             border: 1px solid red;
+            // &::after{
+            //     content: "Invalid Value";
+            // }
         }
         background-color: $LightGrayishCyan2;
         display: flex;
@@ -140,6 +143,11 @@ body{
         font-size: 10px;
     }
     
+}
+
+.btn-disable{
+    pointer-events: none;
+    opacity: .4;
 }
 
 

@@ -162,4 +162,9 @@ body input[type=number]::-webkit-outer-spin-button {
   color: #c5e4e7;
   font-size: 10px;
 }
+
+.btn-disable {
+  pointer-events: none;
+  opacity: .4;
+}
 /*# sourceMappingURL=style.css.map */
