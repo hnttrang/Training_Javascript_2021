@@ -35,14 +35,23 @@ body{
     .tip-pad{
         &__row{
             padding: 0.5rem;
+            display: flex;
+            justify-content: space-between;
             .percent-button{
                 font-weight: 700;
                 background-color: $VeryDarkCyan;
                 margin: 0.5rem;
-                padding: 0.5rem 3rem 0.5rem 3rem;
+                padding: 0.5rem 2rem 0.5rem 2rem;
                 border-radius: 5px;
                 color: white;
                 cursor: pointer;
+                width: 5rem;
+                text-align: center;
+
+                &__target{
+                    background-color: $strongCyan;
+                    color: black;
+                }
 
                 &:target{
                     background-color: $strongCyan;
@@ -53,10 +62,11 @@ body{
 
             }
             input{
-                width: 10%;
-                padding: 0 1rem 0 1rem;
                 color: white;
-                width: auto;
+                font-family: 'Space Mono', monospace;
+                font-weight: 400;
+                outline: none;
+                border: none;
             }
             
         }

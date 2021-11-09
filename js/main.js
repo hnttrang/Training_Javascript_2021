@@ -1,17 +1,18 @@
 console.log("successfully connected");
 let bill = document.querySelector('#bill');
 let people = document.getElementById('people');
-let tippad = Array.from(document.getElementsByClassName('percent-button')).slice(0, -1);;
+let tippad = Array.from(document.getElementsByClassName('percent-button'));
+
 let custom = document.getElementById('cus-percent');
 let tipAmount = document.getElementById("tipAmount");
 let total = document.getElementById("total");
 let reset = document.getElementById("reset");
-
 let exp ={
     "bill" : null, 
     "people" : null, 
     "percent" : null
 }
+let lastChoice = 0; //Last choice of tippad
 
 bill.addEventListener('change', function(e){
     exp.bill = parseFloat(bill.value);
@@ -25,14 +26,23 @@ people.addEventListener('change', function(e){
 
 //custom tip
 custom.addEventListener("change", function(e){
+    // if(tippad[lastChoice].classList.contains("percent-button__target")){
+    //     tippad[lastChoice].classList.remove("percent-button__target");
+    // }
     exp.percent = parseFloat(custom.value)/100;
     checkExp(exp);
 })
 
 //percent of tip
-tippad.forEach( percent => {
+tippad.forEach( function(percent, idx) {
     percent.addEventListener('click', function(e){
+        //Remove last choice and update current choice
+        if(tippad[lastChoice].classList.contains("percent-button__target")){
+            tippad[lastChoice].classList.remove("percent-button__target");
+        }
+        e.target.classList.add("percent-button__target");
         exp.percent = parseInt(e.target.innerText)/100;
+        lastChoice = idx;
         checkExp(exp);
     })
     

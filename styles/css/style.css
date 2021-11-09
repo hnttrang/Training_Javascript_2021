@@ -45,16 +45,29 @@ body input[type=number]::-webkit-outer-spin-button {
 
 .container .tip-pad__row {
   padding: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .container .tip-pad__row .percent-button {
   font-weight: 700;
   background-color: #00494d;
   margin: 0.5rem;
-  padding: 0.5rem 3rem 0.5rem 3rem;
+  padding: 0.5rem 2rem 0.5rem 2rem;
   border-radius: 5px;
   color: white;
   cursor: pointer;
+  width: 5rem;
+  text-align: center;
+}
+
+.container .tip-pad__row .percent-button__target {
+  background-color: #26c0ab;
+  color: black;
 }
 
 .container .tip-pad__row .percent-button:target {
@@ -62,10 +75,11 @@ body input[type=number]::-webkit-outer-spin-button {
 }
 
 .container .tip-pad__row input {
-  width: 10%;
-  padding: 0 1rem 0 1rem;
   color: white;
-  width: auto;
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
+  outline: none;
+  border: none;
 }
 
 .choice {
