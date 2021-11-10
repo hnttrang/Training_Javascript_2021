@@ -17,12 +17,11 @@ html{
 }
 
 body{
-    
-    min-width: 800px;
-    align-self: center;
-    margin: 7rem;
-    border-radius: 10px;
-    background-color: white;
+    .logo{
+        text-align: center;
+    }
+    padding: 5rem 0 3rem 0;
+    background-color: $LightGrayishCyan;
     input[type=number]::-webkit-inner-spin-button, 
     input[type=number]::-webkit-outer-spin-button { 
         -webkit-appearance: none; 
@@ -34,6 +33,14 @@ body{
     display: flex;
     justify-content: center;
     width: auto;
+    background-color: white;
+    margin: 5rem;
+    border-radius: 20px;
+    @include breakpoint-down(medium){
+        flex-flow: wrap;
+        min-width: $MobileWidth;
+        margin: 0;
+    }
 }
 
 .container{
@@ -41,7 +48,7 @@ body{
     padding: 1rem;
     .input-bar{
         &__invalid{
-            border: 1px solid red;
+            border: 2px solid red;
             // &::after{
             //     content: "Invalid Value";
             // }
@@ -116,17 +123,21 @@ body{
     margin: 2rem;
     padding: 1.5rem;
     flex-grow: 1;
- 
-    a{
-        color: white;
-        cursor: pointer;
-        align-self: center;
-        background-color: $strongCyan;
-        margin: 0.5rem;
-        padding: 0.5rem 1rem 0.5rem 1rem;
-        border-radius: 5px;
-        color: $VeryDarkCyan;
-        cursor: pointer;
+
+    .container{
+        text-align: center;
+
+        a{
+            color: white;
+            cursor: pointer;
+            align-self: center;
+            background-color: $strongCyan;
+            margin: 0.5rem;
+            padding: 0.5rem 1rem 0.5rem 1rem;
+            border-radius: 5px;
+            color: $VeryDarkCyan;
+            cursor: pointer;
+        }
     }
 }
 
@@ -141,6 +152,10 @@ body{
         margin: .2rem;
         color: $LightGrayishCyan;
         font-size: 10px;
+    }
+
+    img{
+        color: $strongCyan;
     }
     
 }

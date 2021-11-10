@@ -14,13 +14,17 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
+  <section class="logo">
+    <img src="images/logo.svg" alt="">
+  </section>
   <section class="main"> 
     <!-- Left side -->
     <section class="container">
       <p>Bill</p>
       <div class="input-bar">
-        <img src="/images/icon-dollar.svg" alt="icon-dollar">
+        <img src="images/icon-dollar.svg" alt="icon-dollar">
         <input type="number" name="bill" id="bill" placeholder="0">
       </div>
       <!-- Beginning of tip-pad -->
@@ -36,7 +40,7 @@
   Custom
  -->
         <div class="tip-pad__row">
-          <a class="percent-button">5% </a>
+          <a class="percent-button">5%</a>
           <a class="percent-button">10%</a>
           <a class="percent-button">15%</a>
         </div>
@@ -50,7 +54,7 @@
       <!-- End of tip-pad-->
       <p>Number of People</p>
       <div class="input-bar">
-        <img src="/images/icon-person.svg" alt="icon-person">
+        <img src="images/icon-person.svg" alt="icon-person">
         <input type="number" name="people" min="1" id="people" placeholder="0">
       </div>
     </section>
@@ -58,11 +62,13 @@
     <section class="right-side">
       <div class="display">
         <h5>Tip Amount <br> <p>/ people</p></h5>
-        <h1><img src="/images/icon-dollar.svg" alt=""><h1 id="tipAmount">0.00</h1></h1>
+        <!-- <img src="/images/icon-dollar.svg" alt=""> -->
+        <h1 id="tipAmount">0.00</h1>
       </div>
       <div class="display">
         <h5>Total <br> <p>/ people</p></h5>
-        <h1><img src="/images/icon-dollar.svg" alt=""><h1 id="total">0.00</h1></h1>
+        <!-- <img src="/images/icon-dollar.svg" alt=""> -->
+        <h1 id="total">0.00</h1>
       </div>
       <div class="container">
         <a id="reset">RESET</a>

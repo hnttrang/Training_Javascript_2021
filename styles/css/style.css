@@ -19,13 +19,12 @@ html h5 {
 }
 
 body {
-  min-width: 800px;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: 7rem;
-  border-radius: 10px;
-  background-color: white;
+  padding: 5rem 0 3rem 0;
+  background-color: #c5e4e7;
+}
+
+body .logo {
+  text-align: center;
 }
 
 body input[type=number]::-webkit-inner-spin-button,
@@ -42,6 +41,18 @@ body input[type=number]::-webkit-outer-spin-button {
       -ms-flex-pack: center;
           justify-content: center;
   width: auto;
+  background-color: white;
+  margin: 5rem;
+  border-radius: 20px;
+}
+
+@media (max-width: 899px) {
+  .main {
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+    min-width: 375px;
+    margin: 0;
+  }
 }
 
 .container {
@@ -62,7 +73,7 @@ body input[type=number]::-webkit-outer-spin-button {
 }
 
 .container .input-bar__invalid {
-  border: 1px solid red;
+  border: 2px solid red;
 }
 
 .container .input-bar input {
@@ -131,7 +142,11 @@ body input[type=number]::-webkit-outer-spin-button {
           flex-grow: 1;
 }
 
-.right-side a {
+.right-side .container {
+  text-align: center;
+}
+
+.right-side .container a {
   color: white;
   cursor: pointer;
   -ms-flex-item-align: center;
@@ -161,6 +176,10 @@ body input[type=number]::-webkit-outer-spin-button {
   margin: .2rem;
   color: #c5e4e7;
   font-size: 10px;
+}
+
+.display img {
+  color: #26c0ab;
 }
 
 .btn-disable {
