@@ -58,7 +58,7 @@ const app = {
         }
         this.lastChoice = target;
         e.target.classList.add("percent-button__target");
-        this.percent = parseFloat(e.target.innerText)/100;
+        this.percent = parseFloat(e.target.innerText);
         this.isValid();
         //console.log(this);
     },
@@ -213,7 +213,7 @@ checkPercent: function(){
         //Custom tip button
         custom.addEventListener('change', function(e){
             //app.updateTarget(0, e);
-            app.percent = parseFloat(custom.value)/100;
+            app.percent = parseFloat(custom.value);
             if(app.checkPercent()){
                 app.isValid();
             }
